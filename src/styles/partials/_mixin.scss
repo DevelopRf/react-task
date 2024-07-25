@@ -1,0 +1,9 @@
+@mixin flexBox($c-gap: null, $r-gap: null, $j-c: null, $a-i: null, $f-d: null) {
+    display: flex;
+    column-gap: $c-gap;
+    row-gap: $r-gap;
+    justify-content: $j-c;
+    align-items: $a-i;
+    flex-direction: $f-d;
+
+}

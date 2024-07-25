@@ -1,0 +1,65 @@
+@import "/src/styles/partials/variables";
+@import "/src/styles/partials/mixin";
+@import "/src/styles/partials/extend";
+
+.description {
+    margin: 100px 0;
+
+    .wrapper {
+        @include flexBox($f-d: column, $r-gap: 20px);
+
+        .cards {
+            @include flexBox($c-gap: 50px);
+
+            .card {
+                user-select: none;
+                border: 1px solid #e5e5e5;
+                border-radius: 10px;
+                width: 33.3333%;
+                padding: 20px;
+                @include flexBox($f-d: column, $r-gap: 40px);
+                transition: all .3s;
+
+                .icon {
+                    align-self: center;
+                    width: 200px;
+
+                    img {
+                        @extend %img;
+                    }
+                }
+
+                h2 {
+                    font-size: 16px;
+                    line-height: 26px;
+                    flex-grow: 1;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    border-color: $clr_primary;
+                }
+            }
+        }
+
+        .btn {
+            align-self: center;
+
+            a {
+                border: 1px solid $clr_primary;
+                display: inline-block;
+                min-width: 130px;
+                padding: 12px 15px;
+                background-color: #fff;
+                border-radius: 10px;
+                color: #000;
+                text-align: center;
+                transition: all .3s;
+
+                &:hover {
+                    background-color: $clr_primary;
+                }
+            }
+        }
+    }
+}

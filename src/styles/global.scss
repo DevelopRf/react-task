@@ -1,0 +1,24 @@
+@import "./partials/variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    &::selection {
+        background-color: $clr_primary;
+        color: #fff;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
